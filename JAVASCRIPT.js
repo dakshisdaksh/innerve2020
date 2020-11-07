@@ -60,6 +60,8 @@ function checka() {
 	}
 	document.getElementById("123").innerHTML = result;
 	console.log(result);
+	reload1();
+
 
 
 }
@@ -75,6 +77,8 @@ function checkb() {
 	}
 	document.getElementById("123").innerHTML = result;
 	console.log(result);
+	reload1();
+
 
 }
 
@@ -83,12 +87,15 @@ function checkc() {
 	if (mcq[2] == a * a) {
 		result++
 		document.getElementById("optionc").className = "btn btn-success btn-block";
+
 	}
 	else {
 		document.getElementById("optionc").className = "btn btn-danger btn-block";
 	}
 	document.getElementById("123").innerHTML = result;
 	console.log(result);
+	reload1();
+
 }
 
 function checkd() {
@@ -102,7 +109,9 @@ function checkd() {
 		document.getElementById("optiond").className = "btn btn-danger btn-block";
 	}
 	document.getElementById("123").innerHTML = result;
-	console.loginnerHTML
+	console.log(result);
+	reload1();
+
 }
 
 var counter = 10;
@@ -113,3 +122,16 @@ setInterval(function () {
 		id.innerHTML = counter;
 	}
 }, 1000);
+
+
+
+function reload1(){
+
+	var c= 1;
+	setInterval( function()  {
+		c--;
+		if (c >= 0) {
+			location.reload()
+		}
+	}, 500);
+}
